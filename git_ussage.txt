@@ -1,15 +1,15 @@
-ǰ�᣺github�˺��Ѿ��󶨱���sshֵ�����Ǻ��沽��Ļ�����
+前提：github账号已经绑定本地ssh值，这是后面步骤的基础。
 #####################################################################
 
-1.��github���½�һ��repository,����Ϊ��SwordToOffer������README.md�ļ�;
-2.�ڱ����½��ļ���SwordToOffer;
-3.����SwordToOffer;
-4.��SwordToOffer�ļ����ڴ�git bash;
-5.��������github�ͱ��ض����ļ���SwordToOffer����ͬ����github���ļ�������README.md�ļ����������ļ���Ϊ�գ�
-6.�ڱ��ش򿪵�git bash������git init,��ʼ������git�ֿ⣬����SwordToOffer�ļ����ڻ����һ�����ص�.git�ļ��С�����ļ����Ǳ��صĲֿ⣬���˻��ƻ����زֿ⣬���Բ�Ҫ������
-7.֮������Ҫ�����ǽ����غ�Զ����ϵ��������Զ�ֿ̲����ҵ����ַ�������ҵ��ǣ�https://github.com/StephenHuge/SwordToOffer.git����git bash������ git remote add origin https://github.com/StephenHuge/SwordToOffer.git��֮��û��ʲô�����Ļ����ǳɹ��ˣ����ڱ��زֿ��Զ�ֿ̲��һ���ˣ�
-8.����Զ�ֿ̲�����ȱ��زֿ⻹��һ��README.md�ļ����������Ǳ����Ƚ�����ļ�ͬ�������أ�֮������ڱ��ؽ��������ϴ�������git bash�����룺 git pull origin master --allow-unrelated-histories��pull��������˼��������README�ļ�������������������ʱ���ػ����һ��README�ļ���
-9.֮�����ǾͿ����ڱ������Ӵ����ˣ�д��֮��git add���ӣ�git commit -m "**"�����ύ��֮������git push -u origin master,push���Ƶ���˼�������ش��롰�ơ���Զ�ֿ̲��С�ˢ��github��ҳ�棬�ͻᷢ�ִ����Ѿ��ϴ���Զ�̲�·���ˣ�
-10.һ��ʱ��������´���д�ã�Ҫͬ����add��commit���յ�9������pushʱ�����Ϊgit push���Ϳ���ֱ�������ˡ�
-11.��github��ҳ�ϸĶ����ļ�����Ҫͬ�������أ�����Ӧ����ô�����أ�
+1.在github上新建一个repository,例如为“SwordToOffer”，带README.md文件;
+2.在本地新建文件夹SwordToOffer;
+3.进入SwordToOffer;
+4.在SwordToOffer文件夹内打开git bash;
+5.现在我们github和本地都有文件夹SwordToOffer，不同的是github上文件夹内有README.md文件，而本地文件夹为空；
+6.在本地打开的git bash中输入git init,初始化本地git仓库，本地SwordToOffer文件夹内会出现一个隐藏的.git文件夹。这个文件夹是本地的仓库，动了会破坏本地仓库，所以不要动它；
+7.之后我们要做的是将本地和远程联系起来：在远程仓库中找到其地址，例如我的是：https://github.com/StephenHuge/SwordToOffer.git。在git bash中输入 git remote add origin https://github.com/StephenHuge/SwordToOffer.git，之后没有什么报错的话就是成功了，现在本地仓库和远程仓库绑到一起了；
+8.由于远程仓库中相比本地仓库还有一个README.md文件，所以我们必须先将这个文件同步到本地，之后才能在本地进行添加上传动作。git bash中输入： git pull origin master --allow-unrelated-histories，pull是拉的意思，这个命令将README文件“拉”到本地来。此时本地会出现一个README文件。
+9.之后我们就可以在本地添加代码了，写好之后，git add添加，git commit -m "**"进行提交，之后输入git push -u origin master,push是推的意思，将本地代码“推”到远程仓库中。刷新github的页面，就会发现代码已经上传到远程仓路上了；
+10.一段时间后又有新代码写好，要同步，add和commit按照第9步来，push时命令变为git push，就可以直接推送了。
+11.在github网页上改动了文件，需要同步到本地，本地应该怎么操作呢？在网页上修改了文件后，保存，然后在本地git bash中git pull就完成了远程修改。
 
