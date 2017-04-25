@@ -1,15 +1,51 @@
-前提：github账号已经绑定本地ssh值，这是后面步骤的基础。
+﻿前提：github账号已经绑定本地ssh值，这是后面步骤的基础。
 #####################################################################
 
-1.在github上新建一个repository,例如为“SwordToOffer”，带README.md文件;
-2.在本地新建文件夹SwordToOffer;
-3.进入SwordToOffer;
-4.在SwordToOffer文件夹内打开git bash;
-5.现在我们github和本地都有文件夹SwordToOffer，不同的是github上文件夹内有README.md文件，而本地文件夹为空；
-6.在本地打开的git bash中输入git init,初始化本地git仓库，本地SwordToOffer文件夹内会出现一个隐藏的.git文件夹。这个文件夹是本地的仓库，动了会破坏本地仓库，所以不要动它；
-7.之后我们要做的是将本地和远程联系起来：在远程仓库中找到其地址，例如我的是：https://github.com/StephenHuge/SwordToOffer.git。在git bash中输入 git remote add origin https://github.com/StephenHuge/SwordToOffer.git，之后没有什么报错的话就是成功了，现在本地仓库和远程仓库绑到一起了；
-8.由于远程仓库中相比本地仓库还有一个README.md文件，所以我们必须先将这个文件同步到本地，之后才能在本地进行添加上传动作。git bash中输入： git pull origin master --allow-unrelated-histories，pull是拉的意思，这个命令将README文件“拉”到本地来。此时本地会出现一个README文件。
-9.之后我们就可以在本地添加代码了，写好之后，git add添加，git commit -m "**"进行提交，之后输入git push -u origin master,push是推的意思，将本地代码“推”到远程仓库中。刷新github的页面，就会发现代码已经上传到远程仓路上了；
-10.一段时间后又有新代码写好，要同步，add和commit按照第9步来，push时命令变为git push，就可以直接推送了。
-11.在github网页上改动了文件，需要同步到本地，本地应该怎么操作呢？在网页上修改了文件后，保存，然后在本地git bash中git pull就完成了远程修改。
+1.在github上新建一个repository,例如为“swordOffer”，带README.md文件;
+2.在本地新建文件夹swordOffer;
+3.进入swordOffer;
+4.在swordOffer文件夹内打开git bash;
+5.现在我们github和本地都有文件夹swordOffer，不同的是github上文件夹内有README.md文件，而本地文件夹为空；
+6.在本地打开的git bash中输入git init,初始化本地git仓库，本地swordOffer文件夹内会出现一个隐藏的.git文件夹。
+这个文件夹是本地的仓库，动了会破坏本地仓库，所以不要动它；
+7.之后我们要做的是将本地和远程联系起来：在远程仓库中找到其地址，例如我的是：
+https://github.com/StephenHuge/swordOffer.git
+在git bash中输入 
+git remote add origin https://github.com/StephenHuge/swordOffer.git
+之后没有什么报错的话就是成功了，现在本地仓库和远程仓库绑到一起了；
+8.由于远程仓库中相比本地仓库还有一个README.md文件，所以我们必须先将这个文件同步到本地，之后才能在本地进行
+添加上传动作。git bash中输入： 
+git pull origin master --allow-unrelated-histories
+pull是拉的意思，这个命令将README文件“拉”到本地来。此时本地会出现一个README文件。
+9.之后我们就可以在本地添加代码了，写好之后，git add添加，git commit -m "**"进行提交，之后输入
+git push -u origin master
+push是推的意思，将本地代码“推”到远程仓库中。刷新github的页面，就会发现代码已经上传到远程仓库上了；
+10.一段时间后又有新代码写好，要同步，add和commit按照第9步来，push时命令变为git push origin master，就可以直接推送了。
+11.在github网页上改动了文件，需要同步到本地，本地应该怎么操作呢？在网页上修改了文件后，保存，然后在本地git bash中输入
+git pull origin
+就完成了远程修改。
+###################################################################
+git的另一个很有用的功能就是分支(branch)功能，使用它能多用户进行开发，十分便于管理且提升了效率。
+参见
+https://git-scm.com/book/zh/v1/Git-%E5%88%86%E6%94%AF-%E5%88%86%E6%94%AF%E7%9A%84%E6%96%B0%E5%BB%BA%E4%B8%8E%E5%90%88%E5%B9%B6
+1.现在我们有个提交过几次的git仓库，如果我们想在给我们的项目加点测试的东西，而又不想留一份原始不被影响的代码。传统的做法是
+复制项目，创建一个副本项目，在副本项目中进行测试，原来的项目不会受到影响。这样看似不错，万一我们觉得测试代码不错，想要把它放进
+原始项目中，我们又不得不把测试代码复制到原始项目中（测试副本要不断进行新的开发），多来几次，万一其中有次出现了错误而没有发现，
+那修改就很麻烦了。版本控制软件的好处就是你可以回到任何一个之前的开发版本中，而分支功能能很好在不影响稳定代码的情况下，允许我们进行
+更多操作，快来学习一下吧。
+2.在git bash中输入
+git checkout -b develop
+这句话等价于
+git branch develop	//创建develop分支
+git checkout develop	//切换到develop分支
+我们现在处于develop分支中，与原来的master分支相对应，develop就是一个git分支，我们可以在develop分支中对代码进行各种修改，添加，提交后（这个不能忘记）
+如果修改出现了问题，想要回到之前的master分支，只需要输入
+git checkout master	//回到master主分支
+就可回到主分支了。
+3.如果在develop中开发了一段时间中，觉得代码已经稳定了，想要将develop分支合并到主分支去,那么git也提供合并操作。具体做法是：切换到主分支（不要忘记）
+git checkout master	//回到master主分支
+在git bash中输入
+git merge develop
+这样master分支和develop分支就合并到一起了，之前在develop分支开发的版本仍然存在，但是如果觉得develop版本已经没用了，以后不会再用到它，那么可以使用删除操作
+git branch -d develop	//删除develop分支
 
