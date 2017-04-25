@@ -33,8 +33,8 @@ public class Ex18JudgeSubTree {
 			return false;
 		}
 		if(biNode.data == sub.data) {	
-//			return judgeSubTree(biNode.lChild, sub.lChild) && //这里要注意：如果结点能相等，直接返回会导致判断错误
-//					judgeSubTree(biNode.rChild, sub.rChild);
+//			return judgeSubTree(biNode.lChild, sub.lChild) && 
+//					judgeSubTree(biNode.rChild, sub.rChild);//这里要注意：如果结点值能相等，直接返回会导致判断错误
 			if(judgeSubTree(biNode.lChild, sub.lChild) && 
 					judgeSubTree(biNode.rChild, sub.rChild) == true) {
 				return true;
@@ -47,7 +47,7 @@ public class Ex18JudgeSubTree {
 		}
 		return result;
 	}
-//	public class BinaryNode{//建议保存在新的文件中，不然在main函数新建时的方式是BinaryNode node = jsp.new BinaryNode(1);
+//	public class BinaryNode{//建议保存在新的文件中，不然在main函数新建结点的方式是BinaryNode node = jsp.new BinaryNode(1);
 //		int data;
 //		BinaryNode lChild;
 //		BinaryNode rChild;
