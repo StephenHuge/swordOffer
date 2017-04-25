@@ -1,0 +1,78 @@
+package swordOffer;
+/**
+ * 面试题 18：树的子结构
+ * 题目：输入两颗二叉树 A 和 B，判断 B 是不是 A 的子结构。
+ * 
+ * @author Stephen Huge
+ * @date 17/04/25
+ */
+public class Ex18JudgeSubTree {
+	public static void main(String[] args) {
+		Ex18JudgeSubTree jst = new Ex18JudgeSubTree();
+		BinaryNode a = new BinaryNode(2);
+		BinaryNode b = new BinaryNode(2);
+		BinaryNode c = new BinaryNode(3);
+		BinaryNode d = new BinaryNode(4);
+		BinaryNode e = new BinaryNode(5);
+		BinaryNode f = new BinaryNode(6);
+		a.lChild = b;
+		a.rChild = c;
+		b.lChild = d;
+		b.rChild = e;
+		c.lChild = f;
+		boolean sol = jst.judgeSubTree(a, b);
+//		boolean sol = jst.judgeSubTree(a, a);
+//		boolean sol = jst.judgeSubTree(a, jst.new BinaryNode(7));
+		System.out.println(sol);
+	}
+//	public boolean judgeSubTree(BinaryNode biNode, BinaryNode sub) {
+//		if(biNode.data == sub.data &&
+//			biNode.lChild == null &&
+//		     sub.lChild == null &&
+//		      biNode.rChild == null &&
+//		       sub.rChild == null) {
+//			return true;
+//		}else{
+//			boolean result = false;
+//			if(biNode.data == sub.data) {
+//				result = judgeSubTree(biNode.lChild, sub.lChild) && 
+//						judgeSubTree(biNode.rChild, sub.rChild);
+//			}else{
+//				result = judgeSubTree(biNode.lChild, sub);
+//				if(!result) {
+//					result = judgeSubTree(biNode.rChild, sub);
+//				}
+//			}
+//			return result;
+//		}
+//	}
+	public boolean judgeSubTree(BinaryNode biNode, BinaryNode sub) {
+		if(sub == null) {
+			return true;
+		}else if(biNode == null) {
+			return false;
+		}
+		if(biNode.data == sub.data) {	
+//			return judgeSubTree(biNode.lChild, sub.lChild) && //这里要注意：如果结点能相等，直接返回会导致判断错误
+//					judgeSubTree(biNode.rChild, sub.rChild);
+			if(judgeSubTree(biNode.lChild, sub.lChild) && 
+					judgeSubTree(biNode.rChild, sub.rChild) == true) {
+				return true;
+			}
+		}
+		boolean result = false; 
+		result = judgeSubTree(biNode.lChild, sub);
+		if(!result) {
+			result = judgeSubTree(biNode.rChild, sub);	
+		}
+		return result;
+	}
+//	public class BinaryNode{
+//		int data;
+//		BinaryNode lChild;
+//		BinaryNode rChild;
+//		public BinaryNode(int data) {
+//			this.data = data;
+//		}
+//	}
+}
