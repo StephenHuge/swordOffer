@@ -25,27 +25,7 @@ public class Ex18JudgeSubTree {
 //		boolean sol = jst.judgeSubTree(a, jst.new BinaryNode(7));
 		System.out.println(sol);
 	}
-//	public boolean judgeSubTree(BinaryNode biNode, BinaryNode sub) {
-//		if(biNode.data == sub.data &&
-//			biNode.lChild == null &&
-//		     sub.lChild == null &&
-//		      biNode.rChild == null &&
-//		       sub.rChild == null) {
-//			return true;
-//		}else{
-//			boolean result = false;
-//			if(biNode.data == sub.data) {
-//				result = judgeSubTree(biNode.lChild, sub.lChild) && 
-//						judgeSubTree(biNode.rChild, sub.rChild);
-//			}else{
-//				result = judgeSubTree(biNode.lChild, sub);
-//				if(!result) {
-//					result = judgeSubTree(biNode.rChild, sub);
-//				}
-//			}
-//			return result;
-//		}
-//	}
+
 	public boolean judgeSubTree(BinaryNode biNode, BinaryNode sub) {
 		if(sub == null) {
 			return true;
@@ -67,7 +47,7 @@ public class Ex18JudgeSubTree {
 		}
 		return result;
 	}
-//	public class BinaryNode{
+//	public class BinaryNode{//建议保存在新的文件中，不然在main函数新建时的方式是BinaryNode node = jsp.new BinaryNode(1);
 //		int data;
 //		BinaryNode lChild;
 //		BinaryNode rChild;
