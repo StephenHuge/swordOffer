@@ -1,7 +1,7 @@
 package swordOffer;
 /**
- * ÃæÊÔÌâ 11£ºÊıÖµµÄÕûÊı´Î·½ÌâÄ¿£ºÊµÏÖº¯Êı doublePower(double base£¬ int exponent)£¬
- * Çó base µÄ exponent´Î·½¡£²»µÃÊ¹ÓÃ¿âº¯Êı£¬Í¬Ê±²»ĞèÒª¿¼ÂÇ´óÊıÎÊÌâ¡£
+ * é¢è¯•é¢˜ 11ï¼šæ•°å€¼çš„æ•´æ•°æ¬¡æ–¹é¢˜ç›®ï¼šå®ç°å‡½æ•° doublePower(double baseï¼Œ int exponent)ï¼Œ
+ * æ±‚ base çš„ exponentæ¬¡æ–¹ã€‚ä¸å¾—ä½¿ç”¨åº“å‡½æ•°ï¼ŒåŒæ—¶ä¸éœ€è¦è€ƒè™‘å¤§æ•°é—®é¢˜ã€‚
  *  
  * @author Stephen Huge
  *
@@ -13,19 +13,19 @@ public class Ex11DoublePower {
 	}
 	public double doublePower(double base, int exponent) throws Exception{
 		if(base == 0.0 && exponent <= 0) {
-			throw new Exception("0µÄ·ÇÕıÊı´ÎÃİÃ»ÓĞÒâÒå");
+			throw new Exception("0çš„éæ­£æ•°æ¬¡å¹‚æ²¡æœ‰æ„ä¹‰");
 		}
 		return getPower(base, exponent);
 	}
 	
 	private double getPower(double base, int exponent) {
-		if(base == 0.0) {	//µ×ÊıÎª0
+		if(base == 0.0) {	//åº•æ•°ä¸º0
 			return 0.0;
 		}
-		if(exponent == 1) {	//Ö¸ÊıÎª1
+		if(exponent == 1) {	//æŒ‡æ•°ä¸º1
 			return base;
 		}
-		if(exponent < 0) {	//Ö¸ÊıÎª¸º
+		if(exponent < 0) {	//æŒ‡æ•°ä¸ºè´Ÿ
 			return 1 / power(base, -exponent);
 		}
 		return power(base, exponent);

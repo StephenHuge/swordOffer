@@ -3,9 +3,9 @@ package swordOffer;
 import java.util.Stack;
 
 /**
- * ÕâÊÇ½£Ö¸offerµÄµÚ7Ìâ£º
- * ÓÃÁ½¸öÕ»ÊµÏÖÒ»¸ö¶ÓÁĞ£¬ÊµÏÖ¶ÔÁËµÄÁ½¸öº¯Êı appendTail ºÍdeleteHead£¬
- * ·Ö±ğÍê³ÉÔÚ¶ÓÁĞÎ²²åÈë½áµãºÍÔÚ¶ÓÁĞÍ·²¿É¾³ı½áµãµÄ¹¦ÄÜ¡£
+ * è¿™æ˜¯å‰‘æŒ‡offerçš„ç¬¬7é¢˜ï¼š
+ * ç”¨ä¸¤ä¸ªæ ˆå®ç°ä¸€ä¸ªé˜Ÿåˆ—ï¼Œå®ç°å¯¹äº†çš„ä¸¤ä¸ªå‡½æ•° appendTail å’ŒdeleteHeadï¼Œ
+ * åˆ†åˆ«å®Œæˆåœ¨é˜Ÿåˆ—å°¾æ’å…¥ç»“ç‚¹å’Œåœ¨é˜Ÿåˆ—å¤´éƒ¨åˆ é™¤ç»“ç‚¹çš„åŠŸèƒ½ã€‚
  * @author Stephen Huge
  */
 public class Ex07StacksToQueue<T> {
@@ -13,8 +13,8 @@ public class Ex07StacksToQueue<T> {
 	private Stack<T> stack2 = new Stack<T>();
 	
 	/**
-	 * Íù¶ÓÁĞÎ²Ìí¼ÓĞÂµÄÔªËØ£¬Ìí¼Ó³É¹¦·µ»Øtrue£¬Ìí¼ÓÊ§°Ü·µ»Øfalse
-	 * @return Ìí¼Ó³É¹¦·µ»Øtrue£¬Ìí¼ÓÊ§°Ü·µ»Øfalse
+	 * å¾€é˜Ÿåˆ—å°¾æ·»åŠ æ–°çš„å…ƒç´ ï¼Œæ·»åŠ æˆåŠŸè¿”å›trueï¼Œæ·»åŠ å¤±è´¥è¿”å›false
+	 * @return æ·»åŠ æˆåŠŸè¿”å›trueï¼Œæ·»åŠ å¤±è´¥è¿”å›false
 	 */
 	public boolean appendTail(T element) {
 		if(!stack1.isEmpty() && !stack2.isEmpty()) {
@@ -28,9 +28,9 @@ public class Ex07StacksToQueue<T> {
 		}		
 	}
 	/**
-	 * ¶ÓÍ·ÔªËØ³ö¶Ó£¬³ö¶Ó³É¹¦Ôò·µ»Ø³ö¶ÓµÄÔªËØ£¬³ö¶ÓÊ§°ÜÔòÅ×³öÒì³£"failed"
-	 * @return ³ö¶Ó³É¹¦Ôò·µ»Ø³ö¶ÓµÄÔªËØ
-	 * @throws Exception ³ö¶ÓÊ§°ÜÔòÅ×³öÒì³£"failed"
+	 * é˜Ÿå¤´å…ƒç´ å‡ºé˜Ÿï¼Œå‡ºé˜ŸæˆåŠŸåˆ™è¿”å›å‡ºé˜Ÿçš„å…ƒç´ ï¼Œå‡ºé˜Ÿå¤±è´¥åˆ™æŠ›å‡ºå¼‚å¸¸"failed"
+	 * @return å‡ºé˜ŸæˆåŠŸåˆ™è¿”å›å‡ºé˜Ÿçš„å…ƒç´ 
+	 * @throws Exception å‡ºé˜Ÿå¤±è´¥åˆ™æŠ›å‡ºå¼‚å¸¸"failed"
 	 */
 	public T deleteHead() throws Exception{
 		if(!stack1.isEmpty() && stack2.isEmpty()) {

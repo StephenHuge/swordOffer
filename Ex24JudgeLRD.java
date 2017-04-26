@@ -1,8 +1,8 @@
 package swordOffer;
 /**
- * ÃæÊÔÌâ 24£º¶ş²æËÑË÷Ê÷µÄºóĞò±éÀúĞòÁĞ
- * ÌâÄ¿£ºÊäÈëÒ»¸öÕûÊıÊı×é£¬ÅĞ¶Ï¸ÃÊı×éÊÇ²»ÊÇÄ³¶ş²æËÑË÷Ê÷µÄºóĞò±éÀúµÄ½á¹û¡£
- * ÊÇÔò·µ»Øtrue£¬·ñÔò·µ»Øfalse¡£
+ * é¢è¯•é¢˜ 24ï¼šäºŒå‰æœç´¢æ ‘çš„ååºéå†åºåˆ—
+ * é¢˜ç›®ï¼šè¾“å…¥ä¸€ä¸ªæ•´æ•°æ•°ç»„ï¼Œåˆ¤æ–­è¯¥æ•°ç»„æ˜¯ä¸æ˜¯æŸäºŒå‰æœç´¢æ ‘çš„ååºéå†çš„ç»“æœã€‚
+ * æ˜¯åˆ™è¿”å›trueï¼Œå¦åˆ™è¿”å›falseã€‚
  * 
  * @author Stephen Huge
  * 
@@ -16,29 +16,29 @@ public class Ex24JudgeLRD {
 		System.out.println(judgeLRD(lrd));
 	}
 	public static boolean judgeLRD(int[] lrd) throws Exception {
-		if(lrd == null || lrd.length == 0) {	//Êı×éÎªnull»òÕß³¤¶ÈÎª0ÔòÅ×³öÒì³£
-			throw new Exception("Êı×éÊäÈëÊ§Îó");
+		if(lrd == null || lrd.length == 0) {	//æ•°ç»„ä¸ºnullæˆ–è€…é•¿åº¦ä¸º0åˆ™æŠ›å‡ºå¼‚å¸¸
+			throw new Exception("æ•°ç»„è¾“å…¥å¤±è¯¯");
 		}	
 		int len = lrd.length;
-		if(len == 1) {	// Ä¬ÈÏÈç¹ûlrd³¤¶ÈÎª1£¬Ôò·ûºÏ¹æÔò£¬·µ»Øtrue
+		if(len == 1) {	// é»˜è®¤å¦‚æœlrdé•¿åº¦ä¸º1ï¼Œåˆ™ç¬¦åˆè§„åˆ™ï¼Œè¿”å›true
 			return true;
 		}
 		int root = lrd[len - 1];
 		int cut = 0;
-		while(lrd[cut] < root && cut < len - 1) {	//½«Êı×éÇĞ³ÉÓÃcutÁ½²¿·Ö£¬×ó²¿·Ö0µ½cut£¬ÓÒ²¿·Öcut+1µ½len-2
-			if(lrd[cut] == root) {	//²»ÄÜÓĞÏàµÈµÄÖµ
+		while(lrd[cut] < root && cut < len - 1) {	//å°†æ•°ç»„åˆ‡æˆç”¨cutä¸¤éƒ¨åˆ†ï¼Œå·¦éƒ¨åˆ†0åˆ°cutï¼Œå³éƒ¨åˆ†cut+1åˆ°len-2
+			if(lrd[cut] == root) {	//ä¸èƒ½æœ‰ç›¸ç­‰çš„å€¼
 				return false;
 			}
 			cut++;
 		}
 		int[] lTree = null;
 		int[] rTree = null;
-		boolean left = false;	//×ó×ÓÊ÷ÊÇ·ñ·ûºÏ¹æÔò
-		boolean right = false;	//ÓÒ×ÓÊ÷ÊÇ·ñ·ûºÏ¹æÔò
+		boolean left = false;	//å·¦å­æ ‘æ˜¯å¦ç¬¦åˆè§„åˆ™
+		boolean right = false;	//å³å­æ ‘æ˜¯å¦ç¬¦åˆè§„åˆ™
 		if(cut != 0) {
 			lTree = Arrays.copyOfRange(lrd, 0, cut);
 			left = judgeLRD(lTree);
-		}else{  //×ó×ÓÊ÷Îª¿Õ£¬Ä¬ÈÏ·ûºÏ
+		}else{  //å·¦å­æ ‘ä¸ºç©ºï¼Œé»˜è®¤ç¬¦åˆ
 			left = true;
 		}
 		if(cut != len -1) {
@@ -49,9 +49,9 @@ public class Ex24JudgeLRD {
 				}
 			}
 			right = judgeLRD(rTree);
-		}else{  //ÓÒ×ÓÊ÷Îª¿Õ£¬Ä¬ÈÏ·ûºÏ
+		}else{  //å³å­æ ‘ä¸ºç©ºï¼Œé»˜è®¤ç¬¦åˆ
 			right = true;
 		}		
-		return left && right;	//×óÓÒ×ÓÊ÷¾ù·ûºÏ¹æÔòÔò·µ»Øtrue£¬·ñÔò·µ»Øfalse
+		return left && right;	//å·¦å³å­æ ‘å‡ç¬¦åˆè§„åˆ™åˆ™è¿”å›trueï¼Œå¦åˆ™è¿”å›false
 	}
 }		

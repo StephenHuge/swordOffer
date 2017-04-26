@@ -1,9 +1,9 @@
 package swordOffer;
 /**
- * ���ǽ�ָoffer�ĵ�8�⣺��ת�������С����
- * ��Ŀ��������һ�������ʼ�����ɸ�Ԫ�ذᵽ�����ĩβ�����ǳ�֮Ϊ�����
- * ��ת������һ����������������һ����ת�������ת�������СԪ�ء�������
- * ��{3,4,5,1,2}Ϊ{1,2,3,4,5}��һ����ת�����������СֵΪ 1��
+ * 这是剑指offer的第8题：旋转数组的最小数字
+ * 题目描述：把一个数组最开始的若干个元素搬到数组的末尾，我们称之为数组的
+ * 旋转。输入一个递增排序的数组的一个旋转，输出旋转数组的最小元素。例如数
+ * 组{3,4,5,1,2}为{1,2,3,4,5}的一个旋转，该数组的最小值为 1。
  * 
  * @author Stephen Huge
  *
@@ -38,7 +38,7 @@ public class Ex08MinAtRotateArr {
 		return MinAtRotateArr(arr, left, right);
 		
 	}
-	// ������������ͬʱ���޷�ʹ�ö��ַ��жϣ����ñ����ж�
+	// 数组左右数相同时，无法使用二分法判断，采用遍历判断
 	private int iterateGet(int[] arr) {
 		int result = arr[0];
 		for(int i = 1; i < arr.length; i++) {

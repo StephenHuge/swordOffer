@@ -2,9 +2,9 @@ package swordOffer;
 
 import java.util.Scanner;
 /**
- * ÃæÊÔÌâ 46£ºÇó 1+2+...+n
- * ÌâÄ¿£ºÇó 1+2+...+n,ÒªÇó²»ÄÜÓÃ³ı·¨¡¢ for¡¢ while¡¢ if¡¢ else¡¢ switch¡¢ case
- * µÈ¹Ø¼ü×Ö¼°Ìõ¼şÅĞ¶ÏÓï¾ä£¨ A?B:C£©¡£
+ * é¢è¯•é¢˜ 46ï¼šæ±‚ 1+2+...+n
+ * é¢˜ç›®ï¼šæ±‚ 1+2+...+n,è¦æ±‚ä¸èƒ½ç”¨é™¤æ³•ã€ forã€ whileã€ ifã€ elseã€ switchã€ case
+ * ç­‰å…³é”®å­—åŠæ¡ä»¶åˆ¤æ–­è¯­å¥ï¼ˆ A?B:Cï¼‰ã€‚
  * 
  * @author Stephen Huge
  * @date 17/04/22
@@ -25,7 +25,7 @@ public class Ex46Sum {
 //		if(n == 1) {
 //			return 1;
 //		}
-//		if((n & 1) == 0) {//Å¼Êı
+//		if((n & 1) == 0) {//å¶æ•°
 //			
 //		}
 //	}

@@ -1,15 +1,15 @@
 package swordOffer;
 /**
- * ÕâÊÇ½£Ö¸offerµÄµÚ19Ìâ£º¶ş²æÊ÷µÄ¾µÏñ
- * ÌâÄ¿£ºÇëÍê³ÉÒ»¸öº¯Êı£¬ÊäÈëÒ»¸ö¶ş²æÊ÷£¬¸Ãº¯ÊıÊä³öËüµÄ¾µÏñ¡£
+ * è¿™æ˜¯å‰‘æŒ‡offerçš„ç¬¬19é¢˜ï¼šäºŒå‰æ ‘çš„é•œåƒ
+ * é¢˜ç›®ï¼šè¯·å®Œæˆä¸€ä¸ªå‡½æ•°ï¼Œè¾“å…¥ä¸€ä¸ªäºŒå‰æ ‘ï¼Œè¯¥å‡½æ•°è¾“å‡ºå®ƒçš„é•œåƒã€‚
  * 
  * @author Stephen Huge
  *
  */
 public class Ex19BTImage {
 	public static void main(String[] args) throws Exception {	
-		int[] dlr = {1,2,4,7,3,5,6,8};	//Ç°Ğò±éÀúĞòÁĞ 
-		int[] ldr = {4,7,2,1,5,3,8,6};	//ÖĞĞò±éÀúĞòÁĞ
+		int[] dlr = {1,2,4,7,3,5,6,8};	//å‰åºéå†åºåˆ— 
+		int[] ldr = {4,7,2,1,5,3,8,6};	//ä¸­åºéå†åºåˆ—
 		Ex06RebuiltBT rbt= new Ex06RebuiltBT();		
 		BinaryNode bt = rbt.RebuiltBT(dlr, ldr);
 		System.out.println();
@@ -25,11 +25,11 @@ public class Ex19BTImage {
 		if(node.lChild == null && node.rChild == null) {
 			return null;
 		}
-		//¸ü»»×óÓÒ×Ó½áµã
+		//æ›´æ¢å·¦å³å­ç»“ç‚¹
 		BinaryNode temp = node.lChild;
 		node.lChild = node.rChild;
 		node.rChild = temp;
-		//²»¶ÏÏòÏÂµİ¹é£¬»ñµÃ¾µÏñ¶ş²æÊ÷
+		//ä¸æ–­å‘ä¸‹é€’å½’ï¼Œè·å¾—é•œåƒäºŒå‰æ ‘
 		BTImage(node.lChild);
 		BTImage(node.rChild);
 		return node;

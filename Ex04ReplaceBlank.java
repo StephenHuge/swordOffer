@@ -1,7 +1,7 @@
 package swordOffer;
 
 /**
- * ÕâÊÇ½£Ö¸offerµÄµÚËÄÌâ£º½«×Ö·û´®ÖĞµÄ¿Õ¸ñÌæ»»³É"%20"
+ * è¿™æ˜¯å‰‘æŒ‡offerçš„ç¬¬å››é¢˜ï¼šå°†å­—ç¬¦ä¸²ä¸­çš„ç©ºæ ¼æ›¿æ¢æˆ"%20"
  * 
  * @author Steve Huge
  */
@@ -12,14 +12,14 @@ public class Ex04ReplaceBlank {
 		System.out.println(replace.replaceBlank(s));
 	}
 	/**
-	 * Ìæ»»×Ö·û´®inputÖĞµÄ¿Õ¸ñÎª¡°%20¡±¡£
-	 * @param input	Ò»¸ö ×Ö·û´®
-	 * @return	·µ»ØÌæ»»Íê³ÉºóµÄĞÂ×Ö·û´®£¬ÆäÖĞµÄ¿Õ¸ñ¾ù±»Ìæ»»Îª¡°%20¡±
+	 * æ›¿æ¢å­—ç¬¦ä¸²inputä¸­çš„ç©ºæ ¼ä¸ºâ€œ%20â€ã€‚
+	 * @param input	ä¸€ä¸ª å­—ç¬¦ä¸²
+	 * @return	è¿”å›æ›¿æ¢å®Œæˆåçš„æ–°å­—ç¬¦ä¸²ï¼Œå…¶ä¸­çš„ç©ºæ ¼å‡è¢«æ›¿æ¢ä¸ºâ€œ%20â€
 	 */
 	public String replaceBlank(String input){
 		if(input==null)
 		return null;
-//		ÓÉÓÚÊÇµ¥Ïß³Ì±à³Ì£¬ÎÒÃÇÔÚÕâÀïÉáÆúµôStringBuffer£¬¸ÄÓÃStringBuilder
+//		ç”±äºæ˜¯å•çº¿ç¨‹ç¼–ç¨‹ï¼Œæˆ‘ä»¬åœ¨è¿™é‡Œèˆå¼ƒæ‰StringBufferï¼Œæ”¹ç”¨StringBuilder
 //		StringBuffer outputBuffer=new StringBuffer();
 		StringBuilder output = new StringBuilder();
 		for(int i=0;i<input.length();i++){

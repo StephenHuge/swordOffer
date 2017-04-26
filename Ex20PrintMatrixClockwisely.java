@@ -1,6 +1,6 @@
 package swordOffer;
-/**ÃæÊÔÌâ 20£ºË³Ê±Õë´òÓ¡¾ØÕó
- * ÌâÄ¿£ºÊäÈëÒ»¸ö¾ØÕó£¬°´ÕÕ´ÓÍâÏòÀïÒÔË³Ê±ÕëµÄË³ĞòÒÀ´Î´òÓ¡³öÃ¿Ò»¸öÊı×Ö¡£
+/**é¢è¯•é¢˜ 20ï¼šé¡ºæ—¶é’ˆæ‰“å°çŸ©é˜µ
+ * é¢˜ç›®ï¼šè¾“å…¥ä¸€ä¸ªçŸ©é˜µï¼ŒæŒ‰ç…§ä»å¤–å‘é‡Œä»¥é¡ºæ—¶é’ˆçš„é¡ºåºä¾æ¬¡æ‰“å°å‡ºæ¯ä¸€ä¸ªæ•°å­—ã€‚
  * 
  * @author Stephen Huge
  * @date 17/04/22
@@ -20,39 +20,39 @@ public class Ex20PrintMatrixClockwisely {
 			return;
 		}
 		int up = 0;
-		int down = a.length - 1;//Ã¿ÁĞµÄĞĞÊı
+		int down = a.length - 1;//æ¯åˆ—çš„è¡Œæ•°
 		int left = 0;
-		int right = a[0].length - 1;//Ã¿ĞĞµÄÁĞÊı
+		int right = a[0].length - 1;//æ¯è¡Œçš„åˆ—æ•°
 
-		if(up == down) {//ĞĞÊıÎª1
+		if(up == down) {//è¡Œæ•°ä¸º1
 			for(int i = 0; i <= right; i++) {
 				System.out.print(a[0][i] + " ");
 			}
-		}else if(left == right) {//ÁĞÊıÎª1
+		}else if(left == right) {//åˆ—æ•°ä¸º1
 			for(int i = 0; i <= down; i++) {
 				System.out.print(a[i][0] + " ");
 			}
 		}else{
 			while(left < right && up < down) {
-				if(left < right) {//µÚÒ»ºá
+				if(left < right) {//ç¬¬ä¸€æ¨ª
 					for(int i = left; i <= right; i++) {
 						System.out.print(a[up][i] + " ");
 					}
 					up++;
 				}
-				if(up < down) {//µÚÒ»Êú
+				if(up < down) {//ç¬¬ä¸€ç«–
 					for(int j = up; j <= down; j++) {
 						System.out.print(a[j][right] + " ");
 					}
 					right--;
 				}
-				if(left < right) {//µÚ¶şºá
+				if(left < right) {//ç¬¬äºŒæ¨ª
 					for(int k = right; k >= left; k--) {
 						System.out.print(a[down][k] + " ");
 					}
 					down--;
 				}
-				if(up < down) {//µÚ¶şÊú
+				if(up < down) {//ç¬¬äºŒç«–
 					for(int l = down;l >= up; l--) {
 						System.out.print(a[l][left] + " ");
 					}

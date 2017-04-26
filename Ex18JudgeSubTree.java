@@ -47,7 +47,7 @@ public class Ex18JudgeSubTree {
 		}
 		return result;
 	}
-//	public class BinaryNode{//建议保存在新的文件中，不然在main函数新建结点的方式是BinaryNode node = jsp.new BinaryNode(1);
+//	public class BinaryNode{//建议保存在新的文件中，不然在main函数新建时的方式是BinaryNode node = jsp.new BinaryNode(1);
 //		int data;
 //		BinaryNode lChild;
 //		BinaryNode rChild;

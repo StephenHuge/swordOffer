@@ -1,13 +1,13 @@
 package swordOffer;
 
 /**
- * ÕâÊÇ½£Ö¸offerµÄµÚ5Ìâ£º
- * ÊäÈëÒ»¸öÁ´±íµÄÍ·½áµã£¬´ÓÎ²µ½Í··´¹ıÀ´´òÓ¡³öÃ¿¸ö½áµãµÄÖµ¡£
+ * è¿™æ˜¯å‰‘æŒ‡offerçš„ç¬¬5é¢˜ï¼š
+ * è¾“å…¥ä¸€ä¸ªé“¾è¡¨çš„å¤´ç»“ç‚¹ï¼Œä»å°¾åˆ°å¤´åè¿‡æ¥æ‰“å°å‡ºæ¯ä¸ªç»“ç‚¹çš„å€¼ã€‚
  * @author Stephen Huge
  */
 public class Ex05ReverseLinkList2 {	
 	public static void main(String[] args) {
-		//ÄÚ²¿ÀàµÄÊµÀı»¯·½Ê½
+		//å†…éƒ¨ç±»çš„å®ä¾‹åŒ–æ–¹å¼
 		Ex05ReverseLinkList2.Node a = new Ex05ReverseLinkList2().new Node("aaa");
 		Ex05ReverseLinkList2.Node b = new Ex05ReverseLinkList2().new Node("bbb");
 		Ex05ReverseLinkList2.Node c = new Ex05ReverseLinkList2().new Node("ccc");
@@ -17,7 +17,7 @@ public class Ex05ReverseLinkList2 {
 		reverseLinkList2(a);
 	}
 	public static void reverseLinkList2(Node header) {		
-		if(header.next != null) {	//µİ¹éµ÷ÓÃ
+		if(header.next != null) {	//é€’å½’è°ƒç”¨
 			reverseLinkList2(header.next);
 		}		
 		System.out.println(header.data.toString());	
