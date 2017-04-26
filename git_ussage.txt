@@ -48,4 +48,10 @@ git checkout master	//回到master主分支
 git merge develop
 这样master分支和develop分支就合并到一起了，之前在develop分支开发的版本仍然存在，但是如果觉得develop版本已经没用了，以后不会再用到它，那么可以使用删除操作
 git branch -d develop	//删除develop分支
-
+##############################################################
+以上是本地分支的创建方法，如果想要推送本地分支的更新到远程，那么需要创建一个远程分支，创建方法非常简单，例如当前本地分支为devL，在git bash中输入：
+git push origin devL devLR
+这样我们在远程创建了一个分支devLR，我们并不需要进行更多操作，git会默认在远程创建好分支仓库，打开github网站，我们在branch选项中就能找到刚才创建的devLR分支。
+查看所有分支命令是
+git branch -a
+界面中会显示所有的本地分支和远程分支。
