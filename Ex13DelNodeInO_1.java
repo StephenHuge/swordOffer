@@ -1,8 +1,8 @@
 package swordOffer;
 
 /**
- * ÃæÊÔÌâ 13£ºÔÚ O£¨ 1£©Ê±¼äÉ¾³ıÁ´±í½áµã
- * ÌâÄ¿£º¸ø¶¨µ¥ÏòÁ´±íµÄÍ·Ö¸ÕëºÍÒ»¸ö½áµãÖ¸Õë£¬¶¨ÒåÒ»¸öº¯ÊıÔÚ O(1)Ê±¼äÉ¾³ı¸Ã½áµã¡£
+ * é¢è¯•é¢˜ 13ï¼šåœ¨ Oï¼ˆ 1ï¼‰æ—¶é—´åˆ é™¤é“¾è¡¨ç»“ç‚¹
+ * é¢˜ç›®ï¼šç»™å®šå•å‘é“¾è¡¨çš„å¤´æŒ‡é’ˆå’Œä¸€ä¸ªç»“ç‚¹æŒ‡é’ˆï¼Œå®šä¹‰ä¸€ä¸ªå‡½æ•°åœ¨ O(1)æ—¶é—´åˆ é™¤è¯¥ç»“ç‚¹ã€‚
  * 
  * @author Stephen Huge
  *
@@ -20,15 +20,15 @@ public class Ex13DelNodeInO_1 {
 	}
 	public int delNodeInO_1(ListNode head, ListNode delNode) throws Exception {
 		if(head == null || delNode == null) {
-			throw new Exception("ÊäÈëÓĞÎó£¬É¾³ıÊ§°Ü");
+			throw new Exception("è¾“å…¥æœ‰è¯¯ï¼Œåˆ é™¤å¤±è´¥");
 		}
-		if(delNode == head) {	//É¾³ıÍ·Ö¸Õë
+		if(delNode == head) {	//åˆ é™¤å¤´æŒ‡é’ˆ
 			head = delNode.next;
 			int hTemp = delNode.data;
 			delNode = null;
 			return hTemp;
 		}
-		if(delNode.next == null) {	//É¾³ıÎ²Ö¸Õë
+		if(delNode.next == null) {	//åˆ é™¤å°¾æŒ‡é’ˆ
 			int tTemp = delNode.data;
 			delNode = null;
 			return tTemp;

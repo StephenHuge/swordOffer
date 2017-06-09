@@ -2,10 +2,10 @@ package swordOffer;
 
 
 /**
- * ÃæÊÔÌâ 15£ºÁ´±íÖÐµ¹ÊýµÚ k ¸ö½áµã
- * ÌâÄ¿£ºÊäÈëÒ»¸öÁ´±í£¬Êä³ö¸ÃÁ´±íÖÐµ¹ÊýµÚ k ¸ö½áµã¡£ÎªÁË·ûºÏ´ó¶àÊýÈËµÄÏ°¹ß£¬±¾Ìâ´Ó
- * 1¿ªÊ¼¼ÆÊý£¬¼´Á´±íµÄÎ²½áµãÊÇµ¹ÊýµÚÒ»¸ö½áµã¡£ÀýÈçÒ»¸öÓÐ 6 ¸ö½áµãµÄÁ´±í£¬´ÓÍ·½áµã
- * ÒÀ´ÎÊÇ 1,2,3,4£¬ 5,6¡£µ¹ÊýµÚÈý¸ö½áµã¾ÍÊÇÖµÎª 4 µÄ½áµã¡£
+ * é¢è¯•é¢˜ 15ï¼šé“¾è¡¨ä¸­å€’æ•°ç¬¬ k ä¸ªç»“ç‚¹
+ * é¢˜ç›®ï¼šè¾“å…¥ä¸€ä¸ªé“¾è¡¨ï¼Œè¾“å‡ºè¯¥é“¾è¡¨ä¸­å€’æ•°ç¬¬ k ä¸ªç»“ç‚¹ã€‚ä¸ºäº†ç¬¦åˆå¤§å¤šæ•°äººçš„ä¹ æƒ¯ï¼Œæœ¬é¢˜ä»Ž
+ * 1å¼€å§‹è®¡æ•°ï¼Œå³é“¾è¡¨çš„å°¾ç»“ç‚¹æ˜¯å€’æ•°ç¬¬ä¸€ä¸ªç»“ç‚¹ã€‚ä¾‹å¦‚ä¸€ä¸ªæœ‰ 6 ä¸ªç»“ç‚¹çš„é“¾è¡¨ï¼Œä»Žå¤´ç»“ç‚¹
+ * ä¾æ¬¡æ˜¯ 1,2,3,4ï¼Œ 5,6ã€‚å€’æ•°ç¬¬ä¸‰ä¸ªç»“ç‚¹å°±æ˜¯å€¼ä¸º 4 çš„ç»“ç‚¹ã€‚
  * 
  * @author Stephen Huge
  *
@@ -46,7 +46,7 @@ public class Ex15CountBackwardsInLinkList {
 		return result;
 	}
 	/*
-	//ÓÃÕ»¿Õ¼ä¸´ÔÓ¶ÈÎªO£¨n£©£¬Ê±¼ä¸´ÔÓ¶ÈÎªO£¨n£©£¬Ð§ÂÊÌ«µÍ
+	//ç”¨æ ˆç©ºé—´å¤æ‚åº¦ä¸ºOï¼ˆnï¼‰ï¼Œæ—¶é—´å¤æ‚åº¦ä¸ºOï¼ˆnï¼‰ï¼Œæ•ˆçŽ‡å¤ªä½Ž
 	public ListNode countBackwardsInLinkList(ListNode node, int k) {
 		if(node == null || k == 0) {
 			return null;

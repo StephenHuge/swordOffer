@@ -3,8 +3,8 @@ package swordOffer;
 import linearlist.LinkList;
 import stack.*;
 /**
- * ÕâÊÇ½£Ö¸offerµÄµÚ5Ìâ£º
- * ÊäÈëÒ»¸öÁ´±íµÄÍ·½áµã£¬´ÓÎ²µ½Í··´¹ıÀ´´òÓ¡³öÃ¿¸ö½áµãµÄÖµ¡£
+ * è¿™æ˜¯å‰‘æŒ‡offerçš„ç¬¬5é¢˜ï¼š
+ * è¾“å…¥ä¸€ä¸ªé“¾è¡¨çš„å¤´ç»“ç‚¹ï¼Œä»å°¾åˆ°å¤´åè¿‡æ¥æ‰“å°å‡ºæ¯ä¸ªç»“ç‚¹çš„å€¼ã€‚
  * @author Stephen Huge
  */
 public class Ex05ReverseLinkList {
@@ -18,9 +18,9 @@ public class Ex05ReverseLinkList {
 		System.out.println(reverse.toString());		
 	}
 	/**
-	 * Ò»¸öÀûÓÃÕ»·´×ªÁ´±íµÄ·½·¨¡£
-	 * @param list Òª·´×ªµÄÁ´±í
-	 * @return ·´×ªÖ®ºóµÃµ½µÄÁ´Õ»
+	 * ä¸€ä¸ªåˆ©ç”¨æ ˆåè½¬é“¾è¡¨çš„æ–¹æ³•ã€‚
+	 * @param list è¦åè½¬çš„é“¾è¡¨
+	 * @return åè½¬ä¹‹åå¾—åˆ°çš„é“¾æ ˆ
 	 */
 	public static LinkStack<String> reverseLinkList(LinkList<String> list) {
 		if(list.isEmpty()) {

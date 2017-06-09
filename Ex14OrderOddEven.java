@@ -3,9 +3,9 @@ package swordOffer;
 import sortalgorthims.Tool;
 
 /**
- * ÃæÊÔÌâ 14£ºµ÷ÕûÊý×éË³ÐòÊ¹ÆæÊýÎ»ÓÚÅ¼ÊýÇ°Ãæ
- * ÌâÄ¿£ºÊäÈëÒ»¸öÕûÊýÊý×é£¬ÊµÏÖÒ»¸öº¯ÊýÀ´µ÷Õû¸Ãº¯ÊýÊý×éÖÐÊý×ÖµÄË³Ðò£¬Ê¹µÃ
- * ËùÓÐÆæÊýÎ»ÓÚÊý×éµÄÇ°°ë²¿·Ö£¬ËùÓÐµÄÊý×éÎ»ÓÚÊý×éµÄºó°ë²¿·Ö¡£
+ * é¢è¯•é¢˜ 14ï¼šè°ƒæ•´æ•°ç»„é¡ºåºä½¿å¥‡æ•°ä½äºŽå¶æ•°å‰é¢
+ * é¢˜ç›®ï¼šè¾“å…¥ä¸€ä¸ªæ•´æ•°æ•°ç»„ï¼Œå®žçŽ°ä¸€ä¸ªå‡½æ•°æ¥è°ƒæ•´è¯¥å‡½æ•°æ•°ç»„ä¸­æ•°å­—çš„é¡ºåºï¼Œä½¿å¾—
+ * æ‰€æœ‰å¥‡æ•°ä½äºŽæ•°ç»„çš„å‰åŠéƒ¨åˆ†ï¼Œæ‰€æœ‰çš„æ•°ç»„ä½äºŽæ•°ç»„çš„åŽåŠéƒ¨åˆ†ã€‚
  * 
  * @author Stephen Huge
  *
@@ -24,10 +24,10 @@ public class Ex14OrderOddEven {
 		int left = 0;
 		int right = arr.length - 1;
 		while(left < right) {
-			while(left < right && !isEven(arr[left])) {	//Óöµ½Å¼ÊýÍ£ÏÂ
+			while(left < right && !isEven(arr[left])) {	//é‡åˆ°å¶æ•°åœä¸‹
 				left++;
 			}
-			while(left < right && isEven(arr[right])) {	//Óöµ½ÆæÊýÍ£ÏÂ
+			while(left < right && isEven(arr[right])) {	//é‡åˆ°å¥‡æ•°åœä¸‹
 				right--;
 			}
 			if(left < right) {

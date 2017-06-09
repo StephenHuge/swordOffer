@@ -3,9 +3,9 @@ package swordOffer;
 import sortalgorthims.Tool;
 
 /**
- * ÕâÊÇ½£Ö¸offerµÄµÚ3Ìâ£º
- * Ò»¸ö¶þÎ¬Êý×é£¬Ã¿Ò»ÐÐ´Ó×óµ½ÓÒµÝÔö£¬Ã¿Ò»ÁÐ´ÓÉÏµ½ÏÂµÝÔö£®Êä
- * ÈëÒ»¸ö¶þÎ¬Êý×éºÍÒ»¸öÕûÊý£¬ÅÐ¶ÏÊý×éÖÐÊÇ·ñº¬ÓÐÕûÊý¡£
+ * è¿™æ˜¯å‰‘æŒ‡offerçš„ç¬¬3é¢˜ï¼š
+ * ä¸€ä¸ªäºŒç»´æ•°ç»„ï¼Œæ¯ä¸€è¡Œä»Žå·¦åˆ°å³é€’å¢žï¼Œæ¯ä¸€åˆ—ä»Žä¸Šåˆ°ä¸‹é€’å¢žï¼Žè¾“
+ * å…¥ä¸€ä¸ªäºŒç»´æ•°ç»„å’Œä¸€ä¸ªæ•´æ•°ï¼Œåˆ¤æ–­æ•°ç»„ä¸­æ˜¯å¦å«æœ‰æ•´æ•°ã€‚
  * @author Stephen Huge
  */
 
@@ -19,15 +19,15 @@ public class Ex03SearchMatrix {
 	}
 
 	/**
-	 * ÔÚ{@code int}ÐÍ¶þÎ¬Êý×éÑ°ÕÒ{@code int}ÐÍ±äÁ¿sÊÇ·ñ´æÔÚ£¬´æÔÚ·µ»Ø{@code true}£¬·ñÔò·µ»Ø{@code false}£»
-	 * @param a {@code int}ÐÍ¶þÎ¬Êý×é
-	 * @param s ÒªÑ°ÕÒµÄ{@code int}ÐÍ±äÁ¿
-	 * @return Èç¹ûÊý×éaÖÐ´æÔÚs£¬Ôò·µ»Ø{@code true}£¬·ñÔò·µ»Ø{@code false}
+	 * åœ¨{@code int}åž‹äºŒç»´æ•°ç»„å¯»æ‰¾{@code int}åž‹å˜é‡sæ˜¯å¦å­˜åœ¨ï¼Œå­˜åœ¨è¿”å›ž{@code true}ï¼Œå¦åˆ™è¿”å›ž{@code false}ï¼›
+	 * @param a {@code int}åž‹äºŒç»´æ•°ç»„
+	 * @param s è¦å¯»æ‰¾çš„{@code int}åž‹å˜é‡
+	 * @return å¦‚æžœæ•°ç»„aä¸­å­˜åœ¨sï¼Œåˆ™è¿”å›ž{@code true}ï¼Œå¦åˆ™è¿”å›ž{@code false}
 	 */
 	public static boolean searchMatrix(int[][] a, int s){
 		if (a==null)	return false;
-		int col = a[0].length-1;		//ÁÐÊý
-		int row = 0;					//ÐÐÊý
+		int col = a[0].length-1;		//åˆ—æ•°
+		int row = 0;					//è¡Œæ•°
 		while(col>=0 && row<a.length){
 			if (a[row][col]==s)	return true;
 			if (a[row][col]>s)		
@@ -38,14 +38,14 @@ public class Ex03SearchMatrix {
 		return false;	
 	}
 }		
-		/*	//´íÎóµÄ·½·¨
+		/*	//é”™è¯¯çš„æ–¹æ³•
 		if (a==null)	return false;	
 		
-		int col = a.length-1;		//ÐÐÊý
-		int row = a[0].length-1;	//ÁÐÊý
+		int col = a.length-1;		//è¡Œæ•°
+		int row = a[0].length-1;	//åˆ—æ•°
 		if (a[col][row]<s)	return false;
 		while(true){
-			while(col > row){			//ÐÐÊý´óÓÚÁÐÊý£¬°´ÐÐËÑË÷			
+			while(col > row){			//è¡Œæ•°å¤§äºŽåˆ—æ•°ï¼ŒæŒ‰è¡Œæœç´¢			
 				col /= 2;
 				if (a[col][row]==s)	return true;
 				if (a[col][row] > s)	break;
@@ -57,7 +57,7 @@ public class Ex03SearchMatrix {
 				}
 				
 			}
-			while(col < row ){			//ÐÐÊýÐ¡ÓÚÁÐÊý£¬°´ÁÐËÑË÷			
+			while(col < row ){			//è¡Œæ•°å°äºŽåˆ—æ•°ï¼ŒæŒ‰åˆ—æœç´¢			
 				row /= 2;
 				if (a[col][row]==s)	return true;
 				if (a[col][row]>s)	break;

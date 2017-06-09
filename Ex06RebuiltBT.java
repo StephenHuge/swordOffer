@@ -3,31 +3,31 @@ package swordOffer;
 import java.util.Arrays;
 
 /**
- * ÕâÊÇ½£Ö¸offerµÄµÚ6Ìâ£ºÊäÈë¶ş²æÊ÷µÄÇ°Ğò±éÀúºÍÖĞĞò±éÀúµÄ½á¹û£¬ÖØ½¨³ö¸Ã¶ş²æÊ÷¡£
- * ¼ÙÉèÇ°Ğò±éÀúºÍÖĞĞò±éÀú½á¹ûÖĞ¶¼²»°üº¬ÖØ¸´µÄÊı×Ö£¬ÀıÈçÊäÈëµÄÇ°Ğò±éÀúĞòÁĞ
- * {1,2,4,7,3,5,6,8}ºÍÖĞĞò±éÀúĞòÁĞ{4,7,2,1,5,3,8,6}£¬ÖØ½¨³ö¶ş²æÊ÷¡£
+ * è¿™æ˜¯å‰‘æŒ‡offerçš„ç¬¬6é¢˜ï¼šè¾“å…¥äºŒå‰æ ‘çš„å‰åºéå†å’Œä¸­åºéå†çš„ç»“æœï¼Œé‡å»ºå‡ºè¯¥äºŒå‰æ ‘ã€‚
+ * å‡è®¾å‰åºéå†å’Œä¸­åºéå†ç»“æœä¸­éƒ½ä¸åŒ…å«é‡å¤çš„æ•°å­—ï¼Œä¾‹å¦‚è¾“å…¥çš„å‰åºéå†åºåˆ—
+ * {1,2,4,7,3,5,6,8}å’Œä¸­åºéå†åºåˆ—{4,7,2,1,5,3,8,6}ï¼Œé‡å»ºå‡ºäºŒå‰æ ‘ã€‚
  * 
  * @author Stephen Huge
  * 
  */
 public class Ex06RebuiltBT {
 	public static void main(String[] args) throws Exception {
-		int[] dlr = {1,2,4,7,3,5,6,8};	//Ç°Ğò±éÀúĞòÁĞ 
-		int[] ldr = {4,7,2,1,5,3,8,6};	//ÖĞĞò±éÀúĞòÁĞ
+		int[] dlr = {1,2,4,7,3,5,6,8};	//å‰åºéå†åºåˆ— 
+		int[] ldr = {4,7,2,1,5,3,8,6};	//ä¸­åºéå†åºåˆ—
 		Ex06RebuiltBT rbt= new Ex06RebuiltBT();		
 		BinaryNode bt = rbt.RebuiltBT(dlr, ldr);
 		System.out.println();
 		rbt.getLRD(bt);
 	}
-	//Í¨¹ıÇ°Ğò±éÀúĞòÁĞºÍÖĞĞò±éÀúĞòÁĞÖØ½¨¶ş²æÊ÷
+	//é€šè¿‡å‰åºéå†åºåˆ—å’Œä¸­åºéå†åºåˆ—é‡å»ºäºŒå‰æ ‘
 	public BinaryNode RebuiltBT(int[] dlr, int[] ldr) throws Exception {
-//		if(dlr == null || ldr == null) {	//³¤¶ÈÎª0µÄÊı×é²»Îª¿Õ£¬ÕâÃ´ÅĞ¶Ï»áÓĞdataÎª0µÄ½áµã²úÉú
-		if(dlr.length <= 0 || ldr.length <= 0) {	//¿ÉÄÜ²úÉú¿ÕÖ¸ÕëÒì³££¬ÒòÎªÊı×é¿ÉÄÜÎ´±»ÊµÀı»¯£¬
-													//ÔÚÕâ¸öÀı×ÓÖĞËäÎŞ´ËÖ®Óİ£¬µ«ÈÔÓ¦¸Ã×¢Òâ
+//		if(dlr == null || ldr == null) {	//é•¿åº¦ä¸º0çš„æ•°ç»„ä¸ä¸ºç©ºï¼Œè¿™ä¹ˆåˆ¤æ–­ä¼šæœ‰dataä¸º0çš„ç»“ç‚¹äº§ç”Ÿ
+		if(dlr.length <= 0 || ldr.length <= 0) {	//å¯èƒ½äº§ç”Ÿç©ºæŒ‡é’ˆå¼‚å¸¸ï¼Œå› ä¸ºæ•°ç»„å¯èƒ½æœªè¢«å®ä¾‹åŒ–ï¼Œ
+													//åœ¨è¿™ä¸ªä¾‹å­ä¸­è™½æ— æ­¤ä¹‹è™ï¼Œä½†ä»åº”è¯¥æ³¨æ„
 			return null;
 		}
 		if(dlr.length != ldr.length) {
-			throw new Exception("ĞòÁĞ³¤¶È²»ÏàµÈ");
+			throw new Exception("åºåˆ—é•¿åº¦ä¸ç›¸ç­‰");
 		}
 		BinaryNode root = new BinaryNode();				
 		for(int i = 0; i < dlr.length; i++) {
@@ -42,10 +42,10 @@ public class Ex06RebuiltBT {
 		}		
 		return root;
 	}
-	//´òÓ¡¶ş²æÊ÷ºóĞò±éÀúĞòÁĞ
+	//æ‰“å°äºŒå‰æ ‘ååºéå†åºåˆ—
 	public void getLRD(BinaryNode node) {
 		if(node.lChild == null && node.rChild == null) {
-			System.out.print(node.data + " ");	//´òÓ¡Ò¶½áµã
+			System.out.print(node.data + " ");	//æ‰“å°å¶ç»“ç‚¹
 			return;
 		}
 		if(node.lChild != null) {

@@ -1,11 +1,11 @@
 package swordOffer;
 /**
- *ÕâÊÇ½£Ö¸offerµÄµÚ¶şÌâ£ºÊµÏÖµ¥ÀıÄ£Ê½
- *Ïß³Ì°²È«µÄ·½Ê½ÓĞ4ÖÖ
- *1.¶öººÊ½£» 
- *2.Ë«ÖØ¼ì²éËø£¨DLC£©+volatile¹Ø¼ü×Ö£» 
- *3.ÑÓ³Ù³õÊ¼»¯Õ¼Î»ÀàÄ£Ê½£¨Holder£©£» 
- *4.Ã¶¾Ù¡£ 
+ *è¿™æ˜¯å‰‘æŒ‡offerçš„ç¬¬äºŒé¢˜ï¼šå®ç°å•ä¾‹æ¨¡å¼
+ *çº¿ç¨‹å®‰å…¨çš„æ–¹å¼æœ‰4ç§
+ *1.é¥¿æ±‰å¼ï¼› 
+ *2.åŒé‡æ£€æŸ¥é”ï¼ˆDLCï¼‰+volatileå…³é”®å­—ï¼› 
+ *3.å»¶è¿Ÿåˆå§‹åŒ–å ä½ç±»æ¨¡å¼ï¼ˆHolderï¼‰ï¼› 
+ *4.æšä¸¾ã€‚ 
  * @author Stephen Huge
  */
 
@@ -14,15 +14,15 @@ public class Ex02Singleton {
 	private Ex02Singleton(){}
 	
 	/*
-	 * 1.¶öººÊ½
-	 * ÏÈÊµÀı»¯Ò»¸ö¶ÔÏó£¬²»´æÔÚÏß³Ì²»°²È«£¬µ«ÊÇÃ»ÓĞÑÓ³Ù¼ÓÔØ
+	 * 1.é¥¿æ±‰å¼
+	 * å…ˆå®ä¾‹åŒ–ä¸€ä¸ªå¯¹è±¡ï¼Œä¸å­˜åœ¨çº¿ç¨‹ä¸å®‰å…¨ï¼Œä½†æ˜¯æ²¡æœ‰å»¶è¿ŸåŠ è½½
 	private static Ex01Singleton singleton = new Ex01Singleton();
 	public static Ex01Singleton getInstance(){			
 		return singleton;
 	}*/
 	/*
-	 * 2.Ë«ÖØ¼ì²éËø£¨DLC£©+volatile¹Ø¼ü×Ö
-	 * volatile¹Ø¼ü×Ö·ÀÖ¹Ö¸ÁîÖØÅÅĞò£¬Ö®ºóË«ÖØ¼ì²éËø£¨DLC£©½øĞĞ¶ş´ÎÅĞ¶Ï£¬ÄÜÓĞĞ§±ÜÃâÏß³Ì²»°²È«
+	 * 2.åŒé‡æ£€æŸ¥é”ï¼ˆDLCï¼‰+volatileå…³é”®å­—
+	 * volatileå…³é”®å­—é˜²æ­¢æŒ‡ä»¤é‡æ’åºï¼Œä¹‹ååŒé‡æ£€æŸ¥é”ï¼ˆDLCï¼‰è¿›è¡ŒäºŒæ¬¡åˆ¤æ–­ï¼Œèƒ½æœ‰æ•ˆé¿å…çº¿ç¨‹ä¸å®‰å…¨
 	private static volatile Ex01Singleton singleton;
 	public static Ex01Singleton getInstance(){
 		if(singleton == null){
@@ -35,8 +35,8 @@ public class Ex02Singleton {
 		return singleton;
 	}*/
 	/*
-	 * 3.ÑÓ³Ù³õÊ¼»¯Õ¼Î»ÀàÄ£Ê½£¨Holder£©ÓÖ³ÆInitialization on Demand Holder (IoDH)
-	 * ÓÉ¾²Ì¬ÄÚ²¿ÀàInstanceHolder¸ºÔğÊµÀı»¯singleton£¬²»´æÔÚÏß³Ì²»°²È«£¬Ò²ÊµÏÖÁËÑÓ³Ù¼ÓÔØ
+	 * 3.å»¶è¿Ÿåˆå§‹åŒ–å ä½ç±»æ¨¡å¼ï¼ˆHolderï¼‰åˆç§°Initialization on Demand Holder (IoDH)
+	 * ç”±é™æ€å†…éƒ¨ç±»InstanceHolderè´Ÿè´£å®ä¾‹åŒ–singletonï¼Œä¸å­˜åœ¨çº¿ç¨‹ä¸å®‰å…¨ï¼Œä¹Ÿå®ç°äº†å»¶è¿ŸåŠ è½½
 	 private static class InstanceHolder{
 		public static Ex01Singleton singleton = new Ex01Singleton();	
 	}
@@ -45,8 +45,8 @@ public class Ex02Singleton {
 	}*/
 	
 	/*
-	 * 4.Ã¶¾Ù
-	 * ÏÖÊµÖĞ½ÏÉÙ¼û
+	 * 4.æšä¸¾
+	 * ç°å®ä¸­è¾ƒå°‘è§
 	 public enum Singleton{
 	  	INSTANCE:
 	   	public void whateverMethod(){}

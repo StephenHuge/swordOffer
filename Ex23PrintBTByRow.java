@@ -5,14 +5,14 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * ÕâÊÇ½£Ö¸offerµÄµÚ23Ìâ£º´ÓÉÏÍùÏÂ´òÓ¡¶ş²æÊ÷µÄÃ¿¸ö½áµã£¬Í¬Ò»²ãµÄ½áµã°´ÕÕ´Ó×óµ½ÓÒµÄË³Ğò´òÓ¡¡£
+ * è¿™æ˜¯å‰‘æŒ‡offerçš„ç¬¬23é¢˜ï¼šä»ä¸Šå¾€ä¸‹æ‰“å°äºŒå‰æ ‘çš„æ¯ä¸ªç»“ç‚¹ï¼ŒåŒä¸€å±‚çš„ç»“ç‚¹æŒ‰ç…§ä»å·¦åˆ°å³çš„é¡ºåºæ‰“å°ã€‚
  * @author Stephen Huge
  *
  */
 public class Ex23PrintBTByRow {
 	public static void main(String[] args) throws Exception {
-//		int[] dlr = {1,2,4,7,3,5,6,8};	//Ç°Ğò±éÀúĞòÁĞ 
-//		int[] ldr = {4,7,2,1,5,3,8,6};	//ÖĞĞò±éÀúĞòÁĞ
+//		int[] dlr = {1,2,4,7,3,5,6,8};	//å‰åºéå†åºåˆ— 
+//		int[] ldr = {4,7,2,1,5,3,8,6};	//ä¸­åºéå†åºåˆ—
 //		Ex06RebuiltBT rbt= new Ex06RebuiltBT();		
 //		BinaryNode bt = rbt.RebuiltBT(dlr, ldr);
 //		System.out.println();
@@ -43,14 +43,14 @@ public class Ex23PrintBTByRow {
 			}
 			if(node.lChild != null) {
 				q.add(node.lChild);
-				//¼ÇÂ¼last²Ù×÷
+				//è®°å½•lastæ“ä½œ
 				if(node == last && node.rChild == null) {
 					last = node.lChild;
 				}
 			}
 			if(node.rChild != null) {
 				q.add(node.rChild);	
-				//¼ÇÂ¼last²Ù×÷
+				//è®°å½•lastæ“ä½œ
 				if(node == last) {
 					last = node.rChild;
 				}
