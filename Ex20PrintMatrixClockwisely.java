@@ -1,6 +1,6 @@
 package swordOffer;
-/**ÃæÊÔÌâ 20£ºË³Ê±Õë´òÓ¡¾ØÕó
- * ÌâÄ¿£ºÊäÈëÒ»¸ö¾ØÕó£¬°´ÕÕ´ÓÍâÏòÀïÒÔË³Ê±ÕëµÄË³ĞòÒÀ´Î´òÓ¡³öÃ¿Ò»¸öÊı×Ö¡£
+/**é¢è¯•é¢˜ 20ï¼šé¡ºæ—¶é’ˆæ‰“å°çŸ©é˜µ
+ * é¢˜ç›®ï¼šè¾“å…¥ä¸€ä¸ªçŸ©é˜µï¼ŒæŒ‰ç…§ä»å¤–å‘é‡Œä»¥é¡ºæ—¶é’ˆçš„é¡ºåºä¾æ¬¡æ‰“å°å‡ºæ¯ä¸€ä¸ªæ•°å­—ã€‚
  * 
  * @author Stephen Huge
  * @date 17/04/22
@@ -25,12 +25,13 @@ public class Ex20PrintMatrixClockwisely {
 		}
 		
 		int up = 0;
-		int down = a.length - 1;//Ã¿ÁĞµÄĞĞÊı
+		int down = a.length - 1;	//æ¯åˆ—çš„è¡Œæ•°
 		int left = 0;
-		int right = a[0].length - 1;//Ã¿ĞĞµÄÁĞÊı
+		int right = a[0].length - 1;//æ¯è¡Œçš„åˆ—æ•°
 		
-		int rDir = 1;
-		int cDir = 1;
+		int rDir = 1;	// è¡Œçš„æ–¹å‘å˜é‡ï¼Œä¸º1ä»å·¦å¾€å³ï¼Œä¸º0ä»å³å¾€å·¦æ‰“å°
+		int cDir = 1;	// åˆ—çš„æ–¹å‘å˜é‡ï¼Œä¸º1ä»ä¸Šå¾€ä¸‹ï¼Œä¸º0ä»ä¸‹å¾€ä¸Šæ‰“å°
+		
 		while(true) {
 			if(left <= right) {
 				if(rDir == 1) {
@@ -62,25 +63,25 @@ public class Ex20PrintMatrixClockwisely {
 			}	
 		}
 	}
-	private void printLR(int[][] a, int left, int right, int up, int down) {	//´Ó×óµ½ÓÒ´òÓ¡
+	private void printLR(int[][] a, int left, int right, int up, int down) {	//ä»å·¦åˆ°å³æ‰“å°
 		for(int i = left; i <= right; i++) {
 			System.out.print(a[up][i] + " ");
 		}
 		System.out.print(". ");
 	}
-	private void printRL(int[][] a, int left, int right, int up, int down) {	//´ÓÓÒµ½×ó´òÓ¡
+	private void printRL(int[][] a, int left, int right, int up, int down) {	//ä»å³åˆ°å·¦æ‰“å°
 		for(int i = right; i >= left; i--) {
 			System.out.print(a[down][i] + " ");
 		}
 		System.out.print(". ");
 	}
-	private void printUD(int[][] a, int left, int right, int up, int down) {	//´ÓÉÏµ½ÏÂ´òÓ¡
+	private void printUD(int[][] a, int left, int right, int up, int down) {	//ä»ä¸Šåˆ°ä¸‹æ‰“å°
 		for(int i = up; i <= down; i++) {
 			System.out.print(a[i][right] + " ");
 		}
 		System.out.print(". ");
 	}
-	private void printDU(int[][] a, int left, int right, int up, int down) {	//´ÓÏÂµ½ÉÏ´òÓ¡
+	private void printDU(int[][] a, int left, int right, int up, int down) {	//ä»ä¸‹åˆ°ä¸Šæ‰“å°
 		for(int l = down;l >= up; l--) {
 		System.out.print(a[l][left] + " ");
 	}
