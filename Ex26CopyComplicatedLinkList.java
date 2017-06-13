@@ -18,6 +18,7 @@ public class Ex26CopyComplicatedLinkList {
 		ComplicatedLinkList c = new ComplicatedLinkList(3, b, a);
 		ComplicatedLinkList d = new ComplicatedLinkList(4, c, null);
 		ComplicatedLinkList list = new ComplicatedLinkList(5, d, c);
+		@SuppressWarnings("unused")
 		ComplicatedLinkList answer = ccll.copyComplicatedLinkList(list);
 	}
 	public ComplicatedLinkList copyComplicatedLinkList(ComplicatedLinkList list) {

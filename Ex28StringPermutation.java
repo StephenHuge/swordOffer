@@ -11,54 +11,34 @@ import java.util.Scanner;
  *
  */
 public class Ex28StringPermutation {
-	/*public static void main(String[] args) {
-		
-	}
-	
-	public void StringPermutation(String str) {
-		if(str == null) {
-			return;
-		}
-		int len = str.length();
-		for(int j = 0; j < i; j++) {
-			
-		}
-		for(int i = 0; i < len - 1; i++) {
-			String s = str.substring(0, i) + str.substring(i - 1, i) + str.substring(i, len - 1);
-		}
-		
-		
-		
-		
-		
-	}*/
-    public static void main(String[] args) {
+	public static void main(String[] args) {
 //        String str = "";
 //          
 //        Scanner scan = new Scanner(System.in);
 //          
 //        str = scan.nextLine();
-        String str = "abcd";
-        permutation(str.toCharArray(), 0);
-    }
-  
-    public static void permutation(char[] str, int i) {
-        if (i >= str.length)
-            return;
-        if (i == str.length - 1) {
-            System.out.println(String.valueOf(str));
-        } else {
-            for (int j = i; j < str.length; j++) {
-                char temp = str[j];
-                str[j] = str[i];
-                str[i] = temp;
-  
-                permutation(str, i + 1);
-  
-                temp = str[j];
-                str[j] = str[i];
-                str[i] = temp;
-            }
-        }
-    } 
+		String str = "abcd";
+		permutation(str.toCharArray(), 0);
+	}
+
+	public static void permutation(char[] str, int i) {
+		if (i >= str.length) {
+			return;
+		}
+		if (i == str.length - 1) {
+			System.out.println(String.valueOf(str));
+		} else {
+			for (int j = i; j < str.length; j++) {
+				char temp = str[j];
+				str[j] = str[i];
+				str[i] = temp;
+
+				permutation(str, i + 1);
+
+				temp = str[j];
+				str[j] = str[i];
+				str[i] = temp;
+			}
+		}
+	} 
 }

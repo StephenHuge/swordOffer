@@ -11,6 +11,7 @@ import java.util.Scanner;
  */
 public class Ex46Sum {
 	public static void main(String[] args){
+		@SuppressWarnings("resource")
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Input n:");
 		int n = scan.nextInt();
@@ -29,6 +30,7 @@ public class Ex46Sum {
 //			
 //		}
 //	}
+	@SuppressWarnings("unused")
 	public int sum(int n) {
 		if(n <= 0) {
 			return -1;
