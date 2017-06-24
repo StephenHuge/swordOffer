@@ -3,9 +3,9 @@ package swordOffer;
 import java.util.Scanner;
 
 /**
- *面试题 28：字符串的排列
- *题目：输入一个字符串，打印出该字符串中字符的所有排列。
- *
+ * 面试题 28：字符串的排列
+ * 题目：输入一个字符串，打印出该字符串中字符的所有排列。
+ * ps:没理解代码
  * @author Stephen Huge
  * @date 2017年6月12日
  *

@@ -40,7 +40,8 @@ public class Ex25PathOfNumInBiTree {
 		Stack<Integer> stack = new Stack<Integer>();
 		pathOfNumInBiTree(bt, sum, stack, currentSum);
 	}
-	private void pathOfNumInBiTree(BinaryNode bt, int sum, Stack<Integer> stack, int currentSum) {
+	private void pathOfNumInBiTree(BinaryNode bt, int sum, 
+									Stack<Integer> stack, int currentSum) {
 		currentSum += bt.data;
 		stack.push(bt.data);
 		if(bt.lChild == null && bt.rChild == null) {
