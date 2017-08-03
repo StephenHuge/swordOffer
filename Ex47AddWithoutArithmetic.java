@@ -26,9 +26,11 @@ public class Ex47AddWithoutArithmetic {
 			System.out.println("The sum is " + sum);
 		} catch (Exception e) {
 			e.printStackTrace();
+		} finally {
+			sNum1.close();
+			sNum2.close();
 		}
-		sNum1.close();
-		sNum2.close();
+		
 	}
 	public int add(int num1, int num2) {
 		int sum, carry;
