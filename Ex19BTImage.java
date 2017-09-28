@@ -23,7 +23,7 @@ public class Ex19BTImage {
 			return null;
 		}
 		if(node.lChild == null && node.rChild == null) {
-			return null;
+			return node;
 		}
 		//更换左右子结点
 		BinaryNode temp = node.lChild;

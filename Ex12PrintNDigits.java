@@ -10,10 +10,10 @@ package swordOffer;
 public class Ex12PrintNDigits {
 	public static void main(String[] args) throws Exception {
 		Ex12PrintNDigits pnd = new Ex12PrintNDigits();
-		pnd.printNDigits(8);
+		pnd.printNDigits(4);
 	}
 	public void printNDigits(int n) throws Exception{
-		if(n < 0 || n > 8) {	//int型的数最大值是2147483647，是9位，不能超过这个数，所以n最大可以取到8
+		if(n < 0 || n > 8) {	//int型的数最大值是2147483647，十进制是9位，不能超过这个数，所以n最大可以取到8
 			throw new Exception("n的值不合法");
 		}
 		int num = 1;

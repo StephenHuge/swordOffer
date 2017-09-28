@@ -1,8 +1,8 @@
 package swordOffer;
 /**
- * ÃæÊÔÌâ 17£ººÏ²¢Á½¸öÅÅĞòµÄÁ´±í
- * ÌâÄ¿£ºÊäÈëÁ½¸öµİÔöÅÅĞòµÄÁ´±í£¬ºÏ²¢ÕâÁ½¸öÁ´±í²¢Ê¹ĞÂÁ´±íÖĞµÄ½áµãÈÔÈ»ÊÇ°´
- * ÕÕµİÔöÅÅĞòµÄ¡£
+ * é¢è¯•é¢˜ 17ï¼šåˆå¹¶ä¸¤ä¸ªæ’åºçš„é“¾è¡¨
+ * é¢˜ç›®ï¼šè¾“å…¥ä¸¤ä¸ªé€’å¢æ’åºçš„é“¾è¡¨ï¼Œåˆå¹¶è¿™ä¸¤ä¸ªé“¾è¡¨å¹¶ä½¿æ–°é“¾è¡¨ä¸­çš„ç»“ç‚¹ä»ç„¶æ˜¯æŒ‰
+ * ç…§é€’å¢æ’åºçš„ã€‚
  * 
  * @author Stephen Huge
  *
@@ -31,7 +31,7 @@ public class Ex17CombineSortedList {
 		}
 		
 	}
-/*	//µİ¹é
+/*	//é€’å½’
 	public ListNode combineSortedList(ListNode first, ListNode second) {
 		
 		if(first == null && second ==null) {return null;}
@@ -48,14 +48,14 @@ public class Ex17CombineSortedList {
 		}
 		return combined;
 	}*/
-	//·Çµİ¹é
+	//éé€’å½’
 	public ListNode combineSortedList(ListNode first, ListNode second) {
 		
 		if(first == null && second == null) {  return null;  }
 		if(first == null) {	 return second;  }
 		if(second== null) {	 return first;  }
 		
-		ListNode combined = null;	//Êä³öÁ´±í
+		ListNode combined = null;	//è¾“å‡ºé“¾è¡¨
 		ListNode current = null;
 		ListNode fNext = null;
 		ListNode sNext = null;
