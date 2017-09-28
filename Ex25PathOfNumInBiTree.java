@@ -29,7 +29,7 @@ public class Ex25PathOfNumInBiTree {
 		node4.data=7;
 		Ex25PathOfNumInBiTree ponubt = new Ex25PathOfNumInBiTree();
 		int sum = 22;
-//		int sum = 19;
+//		int sum = 19;d
 		ponubt.pathOfNumInBiTree(bt, sum);
 	}
 	public void pathOfNumInBiTree(BinaryNode bt, int sum) {
